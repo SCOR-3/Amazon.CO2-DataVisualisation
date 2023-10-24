@@ -16,6 +16,6 @@ Fork and Run ```streamlit run webapp.py```
 
 ### Aim
 
-**Phase 1** of the project is to visualise supplier sales and determine a metric to calculate how carbon friendly a supplier is. To tackle this we used carbon ratings as a metric. Carbon Ratings and Carbon Footprint are calculated based on certain [factors](https://justenergy.com/blog/how-to-calculate-your-carbon-footprint/). Also we have provided an in-depth visualisation of supplier sales based on Region, Market, and Cities.
+In the initial stage of the project, our objective is to create visual representations of supplier sales data and establish a method for evaluating the environmental sustainability of each supplier. To accomplish this, we are utilizing carbon ratings as a key metric. These carbon ratings, as well as carbon footprint calculations, are derived from specific [factors](https://justenergy.com/blog/how-to-calculate-your-carbon-footprint/). Additionally, we have developed comprehensive visualizations of supplier sales data categorized by Region, Market, and Cities for a more detailed analysis.
 
 
