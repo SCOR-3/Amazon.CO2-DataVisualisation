@@ -82,7 +82,4 @@ def carbonRank(filename, weights, impacts, resultFileName):
     matrix.columns = newColNames
     print(tabulate(matrix, headers = matrix.columns))
 
-
-
-
 # set impact factors and weights 
