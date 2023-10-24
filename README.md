@@ -5,12 +5,14 @@ Website [Link](https://amazon-co2-supply-dashboard.streamlit.app/)
 Fork and Run ```streamlit run webapp.py```
 
 ### For Datasets 
-    + Electricity Analysis:  ```electricity.csv```
-    + Supply Chain Analysis: ```sample.csv```
+    + Electricity Analysis:  electricity.csv
+    + Supply Chain Analysis: sample.csv
 
 ### Machine Learning and Data Preprocessing Notebooks
-    + Energy Time Series Prediction : ```EnergyConsumptionPredictionModel.ipynb```
-    + Supply Chain Data Preprocessing [Dataset Used](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis/data?select=DataCoSupplyChainDataset.csv) : ```SupplyChainDashBoard.ipynb```
+    + Energy Time Series Prediction : EnergyConsumptionPredictionModel.ipynb
+    + Supply Chain Data Preprocessing : SupplyChainDashBoard.ipynb
+    
+[Dataset Used For Supply Chain](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis/data?select=DataCoSupplyChainDataset.csv)
 
 ### Aim
 
