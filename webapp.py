@@ -5,11 +5,14 @@ import numpy as np
 import os 
 import warnings
 
+# def carbonRating
+
 warnings.filterwarnings('ignore')
 
 st.set_page_config(page_title = "Amazon Supply Chain Management", page_icon = ":baggage_claim", layout = "wide")
 st.title(" :baggage_claim: Supply Chain DashBoard")
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>',unsafe_allow_html=True)
+
 
 
 fl2 = st.file_uploader(":file_folder: Electricity Consumption Data",type=(["csv","txt","xlsx","xls"]))
@@ -30,9 +33,22 @@ if fl2 is not None:
         oil = st.number_input('Enter Oil Bill Rupees/Per Litre')
         oil = oil * 113
         carbon_footprint = el + gas + oil
-        if st.button('Calculate'):
-            st.subheader(f"Carbon Footprint: {carbon_footprint} kg CO2")
-
+        cd1, cd2 = st.columns((2))
+        with cd1:
+            if st.button('Calculate'):
+                st.subheader(f"Carbon Footprint: {carbon_footprint} kg CO2")
+        with cd2:
+            if st.button('Compare your Carbon Ranking'):
+                st.subheader("Redirect")
+        
+    # d3, d4, d5 = st.columns((3))
+    # with d3:
+    #     st.subheader(':seedling:   Your Carbon Rating')
+    # with d4:
+    #     st.subheader('Manage Electric Trends')
+    # with d5:
+    #     st.subheader('Manage Electric Trends')
+        
 fl = st.file_uploader(":file_folder: Upload Supply Chain Data Set",type=(["csv","txt","xlsx","xls"]))
 if fl is not None:
     filename = fl.name
@@ -134,12 +150,8 @@ if fl is not None:
         fig = ff.create_table(df_sample, colorscale = "Cividis")
         st.plotly_chart(fig, use_container_width=True)
 
-        # st.markdown("Month wise sub-Category Table")
-        # filtered_df["month"] = filtered_df["Order Date"].dt.month_name()
-        # sub_category_Year = pd.pivot_table(data = filtered_df, values = "Sales", index = ["Sub-Category"],columns = "month")
-        # st.write(sub_category_Year.style.background_gradient(cmap="Blues"))
 
-    # Create a scatter plot
+    # scatter plot
     data1 = px.scatter(filtered_df, x = "Sales", y = "Order Profit Per Order", size = "Order Item Quantity")
     data1['layout'].update(title="Relationship between Sales and Profits using Scatter Plot.",
                         titlefont = dict(size=20),xaxis = dict(title="Sales",titlefont=dict(size=19)),
@@ -148,16 +160,69 @@ if fl is not None:
 
 cmain1, cmain2, cmain3 = st.columns((3))
 with cmain1:
-    st.subheader('Explore Other Amazon Products')
-    st.button('Explore Amazon', type = 'secondary')
+    # st.subheader('Explore Other Amazon Products')
+    centered_div = """
+    <div style="
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
+        ">
+        <h2 style="margin-bottom: 20px;">Explore Other Amazon Products</h2>
+        <button 
+            style="width: 200px; 
+            padding: 10px; 
+            background-color: #ffaa00; 
+            border: none; 
+            border-radius: 5px;
+        ">Explore Amazon</button>
+    </div>
+    """
+
+    st.markdown(centered_div, unsafe_allow_html=True)
 
 with cmain2:
-    st.subheader('Explore Carbon Neutral Projects')
-    st.button('Explore Carbon', type = 'secondary')
+    centered_div = """
+    <div style="
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
+        ">
+        <h2 style="margin-bottom: 20px;">Explore Carbon Neutral Projects</h2>
+        <button 
+            style="width: 200px; 
+            padding: 10px; 
+            background-color: #ffaa00; 
+            border: none; 
+            border-radius: 5px;
+        ">Explore Carbon</button>
+    </div>
+    """
+    st.markdown(centered_div, unsafe_allow_html=True)
 
 with cmain3:
-    st.subheader('Explore Carbon Neutral Projects')
-    st.button('Explore CO2', type = 'secondary')
+    centered_div = """
+    <div style="
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
+        ">
+        <h2 style="margin-bottom: 20px;">Explore Carbon Neutral Projects</h2>
+        <button 
+            style="width: 200px; 
+            padding: 10px; 
+            background-color: #ffaa00; 
+            border: none; 
+            border-radius: 5px;
+            transition: background-color 0.3s ease; 
+        "
+        >Explore CO2</button>
+    </div>
+    """
+
+    st.markdown(centered_div, unsafe_allow_html=True)
     # st.markdown("<div style='text-align: center;'>"
     #         "<button style='width: 100px; height: 40px;' class='streamlit-button-secondary'>Explore</button>"
     #         "</div>", unsafe_allow_html=True)
