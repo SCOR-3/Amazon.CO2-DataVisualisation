@@ -2,7 +2,11 @@
 
 Website [Link](https://amazon-co2-supply-dashboard.streamlit.app/)
 
-Fork and Run ```streamlit run webapp.py```
+### Run
+```pip install -r requirements.txt```
+
+### Fork and Run 
+```streamlit run webapp.py```
 
 ### For Datasets 
     + Electricity Analysis:  electricity.csv
